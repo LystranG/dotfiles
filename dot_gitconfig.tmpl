@@ -1,0 +1,18 @@
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
+[user]
+	email = me@lystran.com
+	name = LystranG
+	signingkey = {{ ( bitwardenFields "item" "common-ssh" ).sshKey.publicKey }}
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
+[safe]
+	directory = /home/lystran/dyad-apps/*

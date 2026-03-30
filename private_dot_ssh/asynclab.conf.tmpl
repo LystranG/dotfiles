@@ -1,0 +1,30 @@
+Host async-jumper
+  HostName ssh.asynclab.club
+  User 2023081023
+  Port 41032
+
+  # IdentityFile ~/.ssh/id_ed25519.pub
+  # IdentitiesOnly yes
+  PreferredAuthentications publickey
+  PubkeyAuthentication yes
+  PasswordAuthentication no
+  KbdInteractiveAuthentication no
+
+  StrictHostKeyChecking accept-new
+
+
+Host async-mc
+  HostName 192.168.34.25
+  User root
+  Port 22
+
+  ProxyJump async-jumper
+
+  # IdentityFile ~/.ssh/id_ed25519.pub
+  # IdentitiesOnly yes
+  PreferredAuthentications publickey
+  PubkeyAuthentication yes
+  PasswordAuthentication no
+  KbdInteractiveAuthentication no
+
+  StrictHostKeyChecking accept-new

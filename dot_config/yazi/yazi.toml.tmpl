@@ -1,0 +1,18 @@
+
+[plugin]
+prepend_fetchers = [
+    { id = "git", url = "*", run = "git"},
+    { id = "git", url = "*/", run = "git"}
+]
+
+[opener]
+edit = [
+    { run = 'nvim "$@"', block = true, for = "unix" },
+]
+extract = [
+    { run = 'ouch d -y "$@"', desc = "Extract here with ouch", for = "unix" },
+]
+dms = [
+    { run = 'dms open "$@"', orphan = true, desc = "DMS Application Picker"}
+]
+
