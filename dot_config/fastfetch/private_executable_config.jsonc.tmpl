@@ -4,10 +4,8 @@
         "type": "file",
 {{- if eq .chezmoi.os "linux" -}}
         "source": "~/.config/fastfetch/arch/arch.txt",
-{{- else if eq .chezmoi.os "darwin" -}}
-        "source": "~/.config/fastfetch/animal/cat-1.jpg",
-{{- end -}}
         "height": 1,
+{{- end -}}
         "padding": {
             "top": 0,
             "left": 0
