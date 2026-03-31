@@ -5,7 +5,7 @@
 [user]
 	email = me@lystran.com
 	name = LystranG
-	signingkey = {{ ( bitwardenFields "item" "common-ssh" ).sshKey.publicKey }}
+	signingkey = {{ ( bitwarden "item" "common-ssh" ).sshKey.publicKey }}
 [commit]
 	gpgsign = true
 [tag]

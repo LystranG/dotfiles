@@ -775,3 +775,5 @@ vnoremap < <gv
 
 " There are several more Neovim mappings that need to be ported.
 
+" 自动切换im
+set keep-english-in-normal[-and-restore-in-insert]
