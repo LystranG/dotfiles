@@ -1,3 +1,5 @@
 {{- if eq .chezmoi.os "darwin" -}}
 {{- include ".p10k_darwin.zsh" }}
+{{- else if eq .chezmoi.os "linux" -}}
+{{- include ".p10k_linux.zsh" }}
 {{- end -}}
