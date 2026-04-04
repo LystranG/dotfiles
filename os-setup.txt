@@ -7,3 +7,6 @@ bitwarden：配置后端url：`bw config server https://xxxxx`
 zimfw：安装插件：`zimfw install`
 
 配置mise
+
+配置Rime，下载万象模型，见 https://www.mintimate.cc/zh/guide/languageModel.html
+https://github.com/amzxyz/RIME-LMDG

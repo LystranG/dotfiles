@@ -1,2 +1,8 @@
 .config/nvim/lazy-lock.json
+
 .config/yazi/flavors
+.config/yazi/plugins
+
+{{ if ne .chezmoi.os "darwin" }}
+Library
+{{ end }}
