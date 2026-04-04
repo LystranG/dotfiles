@@ -2,7 +2,8 @@
 
 积极使用网络搜索功能和Context7 MCP搜索最新的文档。
 
-合理利用系统提供的以下命令行工具：
+@RTK.md
+合理利用系统提供的以下命令行工具(同时严格遵循 RTK.md 的内容)：
 
 - rg: (ripgrep)
 - ag: (The Silver Searcher)
