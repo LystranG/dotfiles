@@ -1,22 +1,22 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "68f7d48"
-hash = "3996fc74044bc44144b323686f887e1"
+rev = "e84f4fe"
+hash = "6fa6a05a81c98dd000fbca3cca6e9682"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "68f7d48"
-hash = "36a484acf6a0a0219c543ccb4cee218f"
+rev = "e84f4fe"
+hash = "26db011a778f261d730d4f5f8bf24b3f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "68f7d48"
-hash = "e2d4bfccf31e5ab05f46fee4797c5215"
+rev = "e84f4fe"
+hash = "91937a4a9b779eabc6983e258befdfe9"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "594b8a2"
-hash = "c9e628fc0312d198db22ae2fa74883b"
+rev = "406ce6c"
+hash = "f5afc904d5106ee368c8aa2ded43bd74"
 
 [[plugin.deps]]
 use = "dedukun/bookmarks"
@@ -30,15 +30,15 @@ hash = "8714306b5cac6359edbacbf545fbd691"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
-rev = "de33976"
-hash = "ce67445ebb1bf3d97b8e44f50904b2c5"
+rev = "e84f4fe"
+hash = "7a4b4237223aaa94e589d1c01a23542a"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
-rev = "5f56364"
-hash = "c0bf69ad2c44005892d586e9693993c6"
+rev = "8e6296f"
+hash = "d9da921c3bd37ba32ee27a8a7a40461f"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-frappe"
-rev = "3edeb49"
-hash = "2af5f0305730530f23e61ccaba119efe"
+rev = "9511cb0"
+hash = "1844f850b0c5d1af511c84399c95e3d7"

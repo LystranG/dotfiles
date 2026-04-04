@@ -1,0 +1,7 @@
+picgo: 安装s3插件，`picgo add s3`
+
+yazi：安装插件，`ya pkg upgrade`
+
+bitwarden：配置后端url：`bw config server https://xxxxx`
+
+zimfw：安装插件：`zimfw install`
