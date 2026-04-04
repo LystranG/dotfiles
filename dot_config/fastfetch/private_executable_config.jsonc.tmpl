@@ -2,10 +2,10 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "type": "file",
-{{- if eq .chezmoi.os "linux" -}}
+{{- if eq .chezmoi.os "linux" }}
         "source": "~/.config/fastfetch/arch/arch.txt",
         "height": 1,
-{{- end -}}
+{{- end }}
         "padding": {
             "top": 0,
             "left": 0
@@ -33,13 +33,13 @@
             "keyColor": "red"
         },
 
-{{- if eq .chezmoi.os "linux" -}}
+{{- if eq .chezmoi.os "linux" }}
         {
             "type": "kernel",
             "key": "   Kernel",
             "keyColor": "red"
         },
-{{- end -}}
+{{- end }}
         {
             "type": "packages",
             "key": "  󰏗 Packages",
@@ -50,14 +50,14 @@
             "key": "   Display",
             "keyColor": "green"
         },
-{{- if eq .chezmoi.os "linux" -}}
+{{- if eq .chezmoi.os "linux" }}
         {
             "type": "wm",
             "key": "   WM",
             "format": "{2}",
             "keyColor": "yellow"
         },
-{{- end -}}
+{{- end }}
         {
             "type": "terminalfont",
             "key": "   Font",
@@ -88,14 +88,14 @@
             "key": "   CPU",
             "keyColor": "blue"
         },
-{{- if eq .chezmoi.os "linux" -}}
+{{- if eq .chezmoi.os "linux" }}
         {
             "type": "gpu",
             "format": "{1} {2} {12} Ghz",
             "key": "  󰋵 GPU",
             "keyColor": "blue"
         },
-{{- end -}}
+{{- end }}
         {
             "type": "shell",
             "format": "{1} {4}",

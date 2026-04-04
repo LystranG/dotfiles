@@ -126,7 +126,7 @@ under the License.
     <server>
       <id>github</id>
       <username>LystranG</username>
-      <password>{{ (bitwardenFields "item" "github-note").token }}</password>
+      <password>{{- (bitwardenFields "item" "github-note").token -}}</password>
     </server>
     <!-- Another sample, using keys to authenticate.
     <server>
