@@ -10,3 +10,13 @@ zimfw：安装插件：`zimfw install`
 
 配置Rime，下载万象模型，见 https://www.mintimate.cc/zh/guide/languageModel.html
 https://github.com/amzxyz/RIME-LMDG
+
+
+# common
+
+thunderbird配置需要手动导出
+
+
+# macos:
+
+raycast需要手动导出
