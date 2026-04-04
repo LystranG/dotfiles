@@ -7,7 +7,7 @@ patch:
     Control_L: noop
     Control_R: noop
 
-  # 强制默认中��，并把 ascii_mode 的 reset 设为 0
+  # 强制默认中文，并把 ascii_mode 的 reset 设为 0
   "switches/@0":
     name: ascii_mode
     reset: 0
