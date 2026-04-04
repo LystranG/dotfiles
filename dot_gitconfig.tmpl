@@ -14,5 +14,5 @@
 	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = {{ .chezmoi.homeDir -}}/.ssh/allowed_signers
-[safe]
-	directory = /home/lystran/dyad-apps/*
+[pull]
+    rebase = false
