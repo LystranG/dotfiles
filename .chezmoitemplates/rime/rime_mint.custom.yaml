@@ -4,5 +4,5 @@ patch:
     name: ascii_mode
     reset: 0
     states: ["中文", "西文"]
-
+  "menu/page_size": 9
   __include: wanxiang:/settings
