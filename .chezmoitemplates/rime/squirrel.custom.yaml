@@ -4,3 +4,4 @@ patch:
   # "style/color_scheme_dark": mojave_dark
   "style/color_scheme": dust
   "style/color_scheme_dark": purity_of_form
+  "style/candidate_list_layout": linear
