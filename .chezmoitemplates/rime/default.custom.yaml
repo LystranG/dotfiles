@@ -1,10 +1,11 @@
 patch:
-  ascii_composer/switch_key:
+  "ascii_composer/switch_key":
     Caps_Lock: noop
     Shift_L: noop
     Shift_R: noop
     Control_L: noop
     Control_R: noop
-  menu:
-    # 候选词个数
-    page_size: 9
+  "menu/page_size": 9
+  schema_list:
+    - schema: double_pinyin_flypy # 小鹤双拼
+    - schema: rime_mint # 薄荷拼音

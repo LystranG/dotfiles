@@ -1,5 +1,6 @@
 patch:
   # "style/color_scheme": mint_light_green
   # "style/color_scheme_dark": mint_dark_green
-  "style/color_scheme": mojave_dark
-  "style/color_scheme_dark": mojave_dark
+  # "style/color_scheme_dark": mojave_dark
+  "style/color_scheme": dust
+  "style/color_scheme_dark": purity_of_form
