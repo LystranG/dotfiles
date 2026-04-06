@@ -3,6 +3,6 @@ patch:
   "switches/@0":
     name: ascii_mode
     reset: 0
-    states: ["中文", "西文"]
+    states: ["中文", "英文"]
 
   __include: wanxiang:/settings
