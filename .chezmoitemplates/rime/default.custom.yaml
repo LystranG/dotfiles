@@ -1,6 +1,6 @@
 patch:
   "ascii_composer/switch_key":
-    Caps_Lock: noop
+    Caps_Lock: commit_code
     Shift_L: noop
     Shift_R: noop
     Control_L: noop
