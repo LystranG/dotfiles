@@ -3,6 +3,7 @@
 vercel
 @mermaid-js/mermaid-cli
 pnpm
+bun
 openskills
 picgo
 prettier
