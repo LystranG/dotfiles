@@ -4,8 +4,9 @@ vercel
 @mermaid-js/mermaid-cli
 pnpm
 bun
-openskills
 picgo
 prettier
 @fission-ai/openspec@latest
-@code-yeongyu/comment-checker
+skills
+@larksuite/cli
+oh-my-codex
