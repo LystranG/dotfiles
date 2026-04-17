@@ -4,8 +4,6 @@ font-family = "Maple Mono NF CN"
 font-size = 14
 adjust-cell-height = 2
 
-mouse-scroll-multiplier = 1
-
 background-opacity = 0.85
 background-blur-radius = 30
 macos-titlebar-style = transparent
