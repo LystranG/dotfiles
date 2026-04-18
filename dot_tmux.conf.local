@@ -6,6 +6,13 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+# -- custom
+
+# 每次滚动 1 行（最平滑）
+set -g @scroll-speed-num-lines-per-scroll 1
+
+# 安装插件（写在 run 那行之前）
+set -g @plugin 'nhdaly/tmux-better-mouse-mode'
 
 # -- bindings ------------------------------------------------------------------
 
