@@ -40,7 +40,7 @@ eval "$(mise activate zsh)"
 export SSH_AUTH_SOCK=/Users/lystran/.bitwarden-ssh-agent.sock
 
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.local/bin:$PATH"
-export PATH="/Users/lystran/.local/share/mise/shims:$PATH"
+# export PATH="/Users/lystran/.local/share/mise/shims:$PATH"
 
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
 export TESTCONTAINERS_HOST_OVERRIDE=$(colima ls -j | jq -r '.address')
