@@ -6,3 +6,5 @@ patch:
     states: ["中文", "英文"]
   "menu/page_size": 9
   __include: wanxiang:/settings
+  # 打印原始字符
+  translator/preedit_format: []
