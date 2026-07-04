@@ -10,3 +10,6 @@
 
 使用Serena MCP进行快速代码检索，提高检索效率和准确性。
 使用Context7 MCP进行技术文档检索，参考最新的API和文档，减少幻觉。
+# graphify
+- **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
+When the user types `/graphify`, invoke the Skill tool with `skill: "graphify"` before doing anything else.
