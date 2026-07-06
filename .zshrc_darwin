@@ -31,7 +31,7 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export HOMEBREW_INSTALL_FROM_API=1
 
 
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bun/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.local/bin:$PATH"
 # export PATH="/Users/lystran/.local/share/mise/shims:$PATH"
 #
 eval "$(mise activate zsh)"
