@@ -1,3 +1,11 @@
 {{- if eq .chezmoi.os "darwin" -}}
 {{- include ".zshrc_darwin" -}}
 {{- end -}}
+
+eval "$(mise activate zsh --shims)"
+eval "$(zoxide init zsh)"
+
+alias ls='eza --icons --git --group-directories-first'
+alias ll='eza -lh --icons --git --group-directories-first'
+alias lt='eza --tree --level=2 --icons'
+

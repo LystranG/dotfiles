@@ -1,0 +1,12 @@
+# PATH环境变量配置
+export PATH="$HOME/.bun/bin:$HOME/.local/bin:$PATH"
+
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+
+export EDITOR="nvim"
+
+export BRAVE_API_KEY={{- (bitwardenFields "item" "api-keys").brave.value -}}
+
+{{- if eq .chezmoi.os "darwin" -}}
+{{- include ".zprofile_darwin" -}}
+{{- end -}}
