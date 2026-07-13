@@ -8,7 +8,7 @@
 
 # -- custom
 
-set -g @plugin 'tmux-plugins/tmux-yank'
+# set -g @plugin 'tmux-plugins/tmux-yank'
 
 set -g allow-passthrough on
 set -s extended-keys on
