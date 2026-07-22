@@ -3,5 +3,8 @@ source ~/.lazy-idea/lazy-idea.vim
 " nmap s <Action>(flash.search)
 " xmap s <Action>(flash.search)
 
+nmap vv <Action>(EditorSelectWord)
+xmap v <Action>(EditorSelectWord)
+
 " 自动切换im
 set keep-english-in-normal
