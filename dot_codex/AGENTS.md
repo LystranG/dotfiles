@@ -12,6 +12,8 @@
 - jq
 - pandoc
 
+查询第三方库或者技术相关资料，优先使用Context7 MCP，其次使用 Brave Search 进行搜索，然后使用 Firecrawl 提取网页信息。
+
 ## MultiAgent
 
 - 只在子任务彼此独立、不会互相写冲突时使用 MultiAgent。
