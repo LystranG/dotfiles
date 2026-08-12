@@ -12,7 +12,7 @@
 - jq
 - pandoc
 
-查询第三方库或者技术相关资料，优先使用Context7 MCP，其次使用 Brave Search 进行搜索，然后使用 Firecrawl 提取网页信息。
+查询第三方库或者技术相关资料，优先使用Context7 MCP，其次使用 Brave Search 进行搜索，然后使用 Firecrawl 提取网页信息，Firecrawl 只用于爬取网页，搜索网页请使用 Brave Search。
 
 ## MultiAgent
 
