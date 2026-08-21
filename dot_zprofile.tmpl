@@ -5,8 +5,13 @@ export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
 
 export EDITOR="nvim"
 
-export BRAVE_API_KEY={{- (bitwardenFields "item" "api-keys").brave.value -}}
+export BRAVE_API_KEY={{ (bitwardenFields "item" "api-keys").brave.value }}
 
-{{- if eq .chezmoi.os "darwin" -}}
+# ai
+# pi-fff 拓展
+export PI_FFF_MODE=override
+export FFF_ENABLE_HOME_SCAN=0
+
+{{if eq .chezmoi.os "darwin" -}}
 {{- include ".zprofile_darwin" -}}
 {{- end -}}
