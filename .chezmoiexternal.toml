@@ -1,7 +1,6 @@
 [".tmux"]
 type = "git-repo"
 url = "https://github.com/gpakosz/.tmux.git"
-refreshPeriod = "24h"
 
 [".tmux".pull]
 args = ["--ff-only"]
