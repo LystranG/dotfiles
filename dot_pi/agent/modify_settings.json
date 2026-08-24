@@ -1,21 +1,30 @@
-{{- /* chezmoi:modify-template */ -}}
-{{- $packages := fromJson `[
-  "npm:pi-mcp-adapter",
-  "npm:pi-web-access",
-  "npm:pi-subagents",
-  "npm:@juicesharp/rpiv-todo",
-  "npm:@ff-labs/pi-fff",
-  "npm:@juicesharp/rpiv-ask-user-question",
-  "npm:context-mode",
-  "npm:pi-hermes-memory",
-  "npm:@narumitw/pi-btw",
-  "npm:pi-codex-tools",
-  "npm:@lystran/pi-guard",
-  "npm:@lystran/pi-serena-hooks",
-  "npm:@lystran/pi-statusline",
-  "npm:@lystran/pi-mvn-compact"
-]` -}}
-{{- fromJson .chezmoi.stdin
+{
+    {- /* chezmoi:modify-template */ -
+    }
+}
+{
+    {- $packages := fromJson `[
+            "npm:pi-mcp-adapter",
+            "npm:pi-web-access",
+            "npm:pi-subagents",
+            "npm:@juicesharp/rpiv-todo",
+            "npm:@ff-labs/pi-fff",
+            "npm:@juicesharp/rpiv-ask-user-question",
+            "npm:context-mode",
+            "npm:pi-hermes-memory",
+            "npm:@narumitw/pi-btw",
+            "npm:pi-codex-tools",
+            "npm:pi-invisible-continue",
+            "npm:@lystran/pi-guard",
+            "npm:@lystran/pi-serena-hooks",
+            "npm:@lystran/pi-statusline",
+            "npm:@lystran/pi-mvn-compact"
+        ]` -
+    }
+}
+{
+    {- fromJson .chezmoi.stdin
   | setValueAtPath "packages" $packages
   | toPrettyJson
-}}
+    }
+}
