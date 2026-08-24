@@ -19,10 +19,7 @@
                                         "modifiers": ["right_command", "right_control", "right_option"]
                                     }
                                 ],
-                                "to_if_alone": {
-                                    "key_code": "spacebar",
-                                    "modifiers": ["left_control"]
-                                },
+                                "to_if_alone": { "key_code": "f17" },
                                 "type": "basic"
                             },
                             {

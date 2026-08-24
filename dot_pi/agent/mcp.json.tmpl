@@ -1,0 +1,45 @@
+{
+  "mcpServers": {
+    "serena": {
+      "command": "serena",
+      "args": [
+        "start-mcp-server",
+        "--context=ide",
+        "--project-from-cwd"
+      ],
+      "directTools": [
+        "replace_content",
+        "replace_in_files",
+        "replace_symbol_body",
+        "insert_after_symbol",
+        "insert_before_symbol",
+        "search_for_pattern",
+        "get_symbols_overview",
+        "find_symbol",
+        "find_referencing_symbols",
+        "find_implementations",
+        "find_declaration",
+        "get_diagnostics_for_file",
+        "rename_symbol",
+        "safe_delete_symbol",
+        "onboarding",
+        "initial_instructions"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        {{ (bitwardenFields "item" "api-keys").context7.value | toJson }}
+      ],
+      "directTools": true,
+      "requestTimeoutMs": 30000
+    },
+    "idea-mcp": {
+      "url": "http://127.0.0.1:64342/stream",
+      "directTools": false
+    }
+  }
+}

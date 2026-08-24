@@ -1,0 +1,10 @@
+{
+    "braveApiKey": {{ (bitwardenFields "item" "api-keys").brave.value | toJson}},
+    "firecrawlApiKey": {{ (bitwardenFields "item" "api-keys").firecrawl.value | toJson }},
+    "ssrf": {
+        "trustEnvProxy": true,
+        "allowRanges": [
+            "198.18.0.0/15"
+        ]
+    }
+}
