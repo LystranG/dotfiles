@@ -5,6 +5,8 @@
 eval "$(mise activate zsh --shims)"
 eval "$(zoxide init zsh)"
 
+export PATH="$HOME/.custom-bin:$PATH"
+
 alias ls='eza --icons --git --group-directories-first'
 alias ll='eza -lh --icons --git --group-directories-first'
 alias lt='eza --tree --level=2 --icons'
