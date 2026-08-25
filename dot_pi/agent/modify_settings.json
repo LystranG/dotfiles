@@ -15,7 +15,8 @@
   "npm:@lystran/pi-guard",
   "npm:@lystran/pi-serena-hooks",
   "npm:@lystran/pi-statusline",
-  "npm:@lystran/pi-mvn-compact"
+  "npm:@lystran/pi-mvn-compact",
+  "npm:@lystran/pi-session-rename"
 ]` -}}
 {{- fromJson .chezmoi.stdin
   | setValueAtPath "packages" $packages
