@@ -11,7 +11,7 @@
   "npm:@narumitw/pi-btw",
   "npm:pi-codex-tools",
   "npm:pi-invisible-continue",
-  "@diegopetrucci/pi-context-inspector",
+  "npm:@diegopetrucci/pi-context-inspector",
   "npm:@lystran/pi-guard",
   "npm:@lystran/pi-serena-hooks",
   "npm:@lystran/pi-statusline",
