@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-exec mise x node@22 -- pi "$@"
+exec mise x node@lts -- pi "$@"
