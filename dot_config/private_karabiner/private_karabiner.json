@@ -25,7 +25,7 @@
                             {
                                 "description": "space capslock switch",
                                 "from": {
-                                    "key_code": "spacebar",
+                                    "key_code": "tab",
                                     "modifiers": {
                                         "mandatory": ["right_command", "right_control", "right_shift", "right_option"],
                                         "optional": ["caps_lock"]
