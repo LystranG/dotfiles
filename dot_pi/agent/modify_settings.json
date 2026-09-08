@@ -14,7 +14,7 @@
   "npm:@diegopetrucci/pi-context-inspector",
   "npm:@lystran/pi-guard",
   "npm:@lystran/pi-serena-hooks",
-  "npm:@lystran/pi-statusline",
+  "npm:pi-powerline-footer",
   "npm:@lystran/pi-mvn-compact",
   "npm:@lystran/pi-session-rename"
 ]` -}}
