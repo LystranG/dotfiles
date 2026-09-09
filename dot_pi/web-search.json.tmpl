@@ -1,11 +1,39 @@
 {
     "braveApiKey": {{ (bitwardenFields "item" "api-keys").brave.value | toJson}},
     "firecrawlApiKey": {{ (bitwardenFields "item" "api-keys").firecrawl.value | toJson }},
+    "tavilyApiKey": {{ (bitwardenFields "item" "api-keys").tavily.value | toJson }},
     "ssrf": {
         "trustEnvProxy": true,
         "allowRanges": [
             "198.18.0.0/15"
         ]
     },
-    "provider": "brave"
+    "webSearch": {
+        "enabled": true
+    },
+    "image": {
+        "enabled": true
+    },
+    "pdf": {
+        "enabled": true,
+        "maxSizeMB": 20,
+        "provider": "auto"
+    },
+    "githubClone": {
+        "enabled": true,
+        "maxRepoSizeMB": 350,
+        "cloneTimeoutSeconds": 30,
+        "clonePath": "/tmp/pi-github-repos"
+    },
+    "githubPrIssue": {
+        "enabled": true
+    },
+    "provider": "brave",
+    "searchRouting": {
+        "providers": ["brave", "tavily"]
+    },
+    "fetchRouting": {
+        "providers": ["firecrawl", "http"],
+        "allowRemoteHostedProviders": true
+    },
 }
