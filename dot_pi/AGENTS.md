@@ -16,3 +16,45 @@ In repositories indexed by CodeGraph (a `.codegraph/` directory exists at the re
 - **Shell** (always works): `codegraph explore "<symbol names or question>"` prints the same output.
 
 If there is no `.codegraph/` directory, skip CodeGraph entirely — indexing is the user's decision.
+
+## Agent 工具选择策略
+
+### 代码探索优先级(只对代码工作生效，如果对应工具不可用则忽略，不要强行使用不可用的工具)
+
+1. **Serena（符号级）**：找定义、引用、实现、类型关系；按 symbol 读取/编辑/替换等等操作；安全 rename/refactor。优先用于“某函数/类/接口在哪里、谁调用它”。
+2. **CodeGraph（全局图）**：跨模块调用链、依赖图、影响范围、相关测试、架构/复杂度分析。修改公共接口、跨模块重构前先查影响范围。
+3. **ast-grep（结构级）**：按 AST 查函数调用、import、异常处理、危险 API；批量结构化改写前先只读预览命中。
+4. **`rg`（文本级）**：错误文本、配置键、环境变量、URL、注释、文档和精确字面量。
+5. **`fd`（文件级）**：按名称/扩展名查文件；不要用无边界 `find .`。
+
+- 已有 Serena / CodeGraph 能回答的问题，不要先用大量 `rg` + `read` 重建上下文。
+- 所有搜索必须限定相关目录与语言/文件类型。
+- 默认禁止访问：`node_modules/`、`dist/`、`build/`、`coverage/`、`.next/`、`.cache/`、`vendor/`、日志、二进制、生成文件、`*.min.js`、`*.map`、大型 lockfile 等等与代码理解无关的目录和文件。
+
+### Shell 与输出预算
+
+- `rg`：小范围精确文本搜索；必须指定目录，禁止 `rg "..." .`。
+- `fd`：查文件；必须指定起始目录，禁止无边界列举仓库。
+- `grep` / `find`：仅当 `rg` / `fd` 不适用或不可用时使用。
+- `jq` / `yq`：解析或修改 JSON/YAML；不要用 grep/sed 解析结构化数据。
+
+RTK：
+
+- 普通、输出很短的命令：直接执行原命令。
+- 预期输出较长的搜索、目录列表、git diff/log、测试、lint、构建、容器日志：显式使用对应 `rtk` 命令，优先 `rtk grep`、`rtk find`、`rtk read`、`rtk git diff`、`rtk test <command>`、`rtk summary <command>`
+- RTK 只压缩输出，不是扩大搜索范围的理由；先缩小范围，再使用 RTK
+- 需要完整失败信息时，根据 RTK 提示使用 `rtk recall <id>`，不要无故重跑大命令
+
+### 项目命令与验证
+
+- 若存在 `justfile`，开始时先运行 `just --list`；项目安装、测试、lint、构建和检查优先使用 `just <recipe>`
+- 修改 Dockerfile：运行 `hadolint Dockerfile` 或 `just docker-lint`
+- 修改 Shell 脚本：运行 `shellcheck <file>` 或 `just shell-lint`
+- 修改格式化受管文件：运行项目 formatter（例如 `prettier --check`）或 `just format-check`
+- 完成中等以上改动或准备提交：运行 `pre-commit run --all-files` 或 `just preflight`
+- 未实际运行检查时，不得声称验证通过
+
+### 其他
+
+- `gh`：查询 GitHub issue、PR、CI、release；创建/评论/合并/发布等写操作须先征得用户确认
+
