@@ -1,9 +1,56 @@
-.config/nvim/lazy-lock.json
+# ============================================================================
+# chezmoi 忽略规则
+#  - 匹配的是「目标路径」（destDir 下的相对路径），语法为 doublestar（支持 **）
+#  - 以 ! 开头表示「不忽略」，官方规定 ! 优先级高于忽略规则：只要某个路径命中了
+#    任意一条 ! 规则就会被部署，同文件里再写忽略规则也盖不掉它（已实测，嵌套
+#    .chezmoiignore 同样盖不掉）。所以「先放行整棵树、再挖掉其中一项」做不到
+#  - 忽略一个目录 ≠ 忽略它的内容，必须显式写 dir/**
+#  - 源目录里以 . 开头的文件（.zshrc_darwin、.p10k_linux.zsh 等）chezmoi 本来就
+#    不部署，它们是 include 片段库，不需要也无法在这里声明
+# ============================================================================
 
-.config/yazi/flavors
-.config/yazi/plugins
+# ---------------------------------------------------------------------------
+# 全平台通用：由工具自身生成或拉取的内容，不纳入管理
+# ---------------------------------------------------------------------------
+.config
 
+# ---------------------------------------------------------------------------
+# Windows：白名单
+#   只部署 4 组：.config、.m2、.pi、AppData/Roaming/Rime（小狼毫 %APPDATA%\Rime）
+#   其余（zsh/p10k/zim/tmux/ssh/gitconfig/ideavimrc/custom-bin/claude/codex 等）
+#   全部限定在 macOS/Linux
+#   副作用：!.config/** 会连带放行 .config/karabiner（! 无法被忽略规则盖掉），
+#   Windows 上会多出 ~/.config/karabiner/karabiner.json —— Karabiner 只有 macOS
+#   能运行，该文件在 Windows 上不会被任何程序读取，属无害静态文件
+# ---------------------------------------------------------------------------
+{{ if eq .chezmoi.os "windows" }}
+*
+*/**
+!.config/**
+!.m2/**
+!.pi/**
+!AppData/**
+{{ end }}
+
+# ---------------------------------------------------------------------------
+# 非 Windows：Windows 专属落点（%APPDATA% 下的路径）不部署到 mac/Linux
+# ---------------------------------------------------------------------------
+{{ if ne .chezmoi.os "windows" }}
+AppData
+AppData/**
+{{ end }}
+
+# ---------------------------------------------------------------------------
+# 非 macOS
+#   Library/**  Squirrel Rime 与 Ghostty 的 macOS 专属目录
+#   .snipaste   Snipaste(macOS)
+#   Karabiner   只有 macOS 能跑（Windows 上会被上面的 !.config/** 放行，见说明）
+# ---------------------------------------------------------------------------
 {{ if ne .chezmoi.os "darwin" }}
 Library
+Library/**
 .snipaste
+.snipaste/**
+.config/karabiner
+.config/karabiner/**
 {{ end }}

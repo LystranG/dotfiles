@@ -1,0 +1,5 @@
+# chezmoi 的源状态必须逐字节还原成目标文件，所以禁止 git 做任何换行转换。
+# 否则 Git for Windows 默认的 core.autocrlf=true 会把 .zshrc / .zprofile 等
+# 模板 checkout 成 CRLF，部署到 %USERPROFILE% 后 zsh 会因为 ^M 直接报错，
+# 同时 chezmoi 会认为「内容不一致」而每次 apply 都重写一遍。
+* -text
