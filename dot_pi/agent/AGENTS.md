@@ -23,6 +23,11 @@ If there is no `.codegraph/` directory, skip CodeGraph entirely — indexing is 
 
 ### 代码探索优先级(只对代码工作生效，如果对应工具不可用则忽略，不要强行使用不可用的工具)
 
+源码关系问题先 CodeGraph；
+结构模式问题用 ast-grep；
+精确文本问题才用 rg；
+CodeGraph 无结果或索引过期时再 fallback。
+
 1. **Serena（符号级）**：找定义、引用、实现、类型关系；按 symbol 读取/编辑/替换等等操作；安全 rename/refactor。优先用于“某函数/类/接口在哪里、谁调用它”。
 2. **CodeGraph（全局图）**：跨模块调用链、依赖图、影响范围、相关测试、架构/复杂度分析。修改公共接口、跨模块重构前先查影响范围。
 3. **ast-grep（结构级）**：按 AST 查函数调用、import、异常处理、危险 API；批量结构化改写前先只读预览命中。
