@@ -51,6 +51,7 @@ RTK：
 - 预期输出较长的搜索、目录列表、git diff/log、测试、lint、构建、容器日志：显式使用对应 `rtk` 命令，优先 `rtk grep`、`rtk find`、`rtk read`、`rtk git diff`、`rtk test <command>`、`rtk summary <command>`
 - RTK 只压缩输出，不是扩大搜索范围的理由；先缩小范围，再使用 RTK
 - 需要完整失败信息时，根据 RTK 提示使用 `rtk recall <id>`，不要无故重跑大命令
+- mvn 命令优先使用提供的mvn工具，这是专门为mvn压缩设计的工具，可以不使用rtk
 
 ### 项目命令与验证
 
