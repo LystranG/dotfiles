@@ -19,5 +19,10 @@ export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 # Added by Toolbox App
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
-
+# 安卓开发环境
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export ANDROID_HOME="$ANDROID_SDK_ROOT"
+export PATH="$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin"
+export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
 
