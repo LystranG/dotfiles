@@ -1,9 +1,0 @@
-{{- if eq .chezmoi.os "darwin" -}}
-Include /Users/lystran/.colima/ssh_config
-{{- end }}
-
-# SSH 客户端配置入口（~/.ssh/config）
-# 该文件用于聚合引用各环境/项目的 SSH 配置。
-
-Include ~/.ssh/asynclab.conf
-Include ~/.ssh/home.conf
