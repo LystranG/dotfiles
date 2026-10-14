@@ -1,7 +1,7 @@
 [settings]
 minimum_release_age = "0"
 
-[go]
+[settings.go]
 download_mirror = "https://goproxy.cn"
 
 [tools]
