@@ -1,8 +1,8 @@
 [settings]
 minimum_release_age = "0"
 
-[settings.go]
-download_mirror = "https://goproxy.cn"
+# [settings.go]
+# download_mirror = "https://goproxy.cn"
 
 [tools]
 bun = "latest"
