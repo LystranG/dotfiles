@@ -27,7 +27,7 @@ node = "lts"
 "npm:@colbymchenry/codegraph" = "latest"
 "npm:openwiki" = "latest"
 "npm:@gitee/gitee-cli" = "latest"
-"npm:apifox-cli" = "latest"
+"npm:apifox-cli" = { version = "latest", trust_policy_excludes = ["mongoose@7.8.13"] }
 "pipx:serena-agent" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 pnpm = "latest"
