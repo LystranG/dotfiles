@@ -26,9 +26,29 @@ node = "lts"
 "npm:@gitee/gitee-cli" = "latest"
 "npm:apifox-cli" = { version = "latest", trust_policy_excludes = ["mongoose@7.8.13"] }
 "npm:agent-desktop" = "latest"
+"npm:docs" = "latest"
+"npm:pptxgenjs" = "latest"
+"npm:react" = "latest"
+"npm:react-dom" = "latest"
+"npm:react-icons" = "latest"
+"npm:sharp" = "latest"
 "pipx:serena-agent" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 pnpm = "latest"
 prettier = "latest"
-python = "3.14"
 uv = "latest"
+
+[tools.python]
+version = "3.14"
+postinstall = '''
+python3 -m pip install \
+  --upgrade \
+  --quiet \
+  --disable-pip-version-check \
+  openpyxl \
+  pandas \
+  "markitdown[pptx]" \
+  Pillow \
+  defusedxml \
+  lxml
+'''
