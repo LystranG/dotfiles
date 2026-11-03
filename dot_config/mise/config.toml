@@ -14,7 +14,7 @@ maven = "3.9.15"
 mvnd = "1.0.5"
 node = "lts"
 "npm:@earendil-works/pi-coding-agent" = "latest"
-"npm:@mermaid-js/mermaid-cli" = "latest"
+"npm:@mermaid-js/mermaid-cli" = { version = "latest", trust_policy_excludes = ["chromium-bidi@157.0.8090-0"] }
 "npm:@oh-my-pi/pi-coding-agent" = "latest"
 "npm:@openai/codex" = "latest"
 "npm:context-mode" = "latest"
