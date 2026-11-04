@@ -26,7 +26,7 @@ node = "lts"
 "npm:@gitee/gitee-cli" = "latest"
 "npm:apifox-cli" = { version = "latest", trust_policy_excludes = ["mongoose@7.8.13"] }
 "npm:agent-desktop" = "latest"
-"npm:docs" = "latest"
+"npm:docx" = "latest"
 "npm:pptxgenjs" = "latest"
 "npm:react" = "latest"
 "npm:react-dom" = "latest"
@@ -42,13 +42,18 @@ uv = "latest"
 version = "3.14"
 postinstall = '''
 python3 -m pip install \
-  --upgrade \
-  --quiet \
-  --disable-pip-version-check \
-  openpyxl \
-  pandas \
-  "markitdown[pptx]" \
-  Pillow \
-  defusedxml \
-  lxml
+    --upgrade \
+    openpyxl \
+    pandas \
+    "markitdown[pptx]" \
+    Pillow \
+    defusedxml \
+    lxml \
+    pypdf \
+    pdfplumber \
+    reportlab \
+    pypdfium2 \
+    pdf2image \
+    pytesseract \
+    mammoth
 '''
