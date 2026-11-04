@@ -12,7 +12,6 @@ gradle = "9.5.1"
 java = "zulu-25"
 maven = "3.9.15"
 mvnd = "1.0.5"
-node = "lts"
 "npm:@earendil-works/pi-coding-agent" = "latest"
 "npm:@mermaid-js/mermaid-cli" = { version = "latest", trust_policy_excludes = ["chromium-bidi@157.0.8090-0"] }
 "npm:@oh-my-pi/pi-coding-agent" = "latest"
@@ -26,15 +25,23 @@ node = "lts"
 "npm:@gitee/gitee-cli" = "latest"
 "npm:apifox-cli" = { version = "latest", trust_policy_excludes = ["mongoose@7.8.13"] }
 "npm:agent-desktop" = "latest"
-"npm:react" = "latest"
-"npm:react-dom" = "latest"
-"npm:react-icons" = "latest"
-"npm:sharp" = "latest"
 "pipx:serena-agent" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 pnpm = "latest"
 prettier = "latest"
 uv = "latest"
+
+[tools.node]
+version = "lts"
+postinstall = '''
+npm install -g \
+    docx \
+    pptxgenjs \
+    react \
+    react-dom \
+    react-icons \
+    sharp
+'''
 
 [tools.python]
 version = "3.14"
