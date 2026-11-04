@@ -26,8 +26,6 @@ node = "lts"
 "npm:@gitee/gitee-cli" = "latest"
 "npm:apifox-cli" = { version = "latest", trust_policy_excludes = ["mongoose@7.8.13"] }
 "npm:agent-desktop" = "latest"
-"npm:docx" = "latest"
-"npm:pptxgenjs" = "latest"
 "npm:react" = "latest"
 "npm:react-dom" = "latest"
 "npm:react-icons" = "latest"
