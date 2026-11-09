@@ -41,8 +41,6 @@ npm install -g \
     react-dom \
     react-icons \
     sharp 
-
-npx @larksuite/cli@latest install
 '''
 
 [tools.python]
