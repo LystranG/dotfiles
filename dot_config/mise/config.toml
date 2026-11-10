@@ -41,6 +41,8 @@ npm install -g \
     react-dom \
     react-icons \
     sharp 
+
+npx puppeteer browsers install chrome-headless-shell
 '''
 
 [tools.python]
