@@ -26,6 +26,7 @@ mvnd = "1.0.5"
 "npm:apifox-cli" = { version = "latest", trust_policy_excludes = ["mongoose@7.8.13"] }
 "npm:agent-desktop" = "latest"
 "npm:@larksuite/cli" = "latest"
+"npm:ui-ux-pro-max-cli" = "latest"
 "pipx:serena-agent" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 pnpm = "latest"
