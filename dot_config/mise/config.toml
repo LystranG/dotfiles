@@ -46,10 +46,10 @@ npm install -g \
     react \
     react-dom \
     react-icons \
-    sharp \
-    @opencode/cli
+    sharp
 
 npm install -g billion-context --prefix=~/.local
+npm install -g @opencode/cli --allow-scripts=@opencode/cli
 '''
 
 [tools.python]
