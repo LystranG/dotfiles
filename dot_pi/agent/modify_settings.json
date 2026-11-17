@@ -14,7 +14,8 @@
   "npm:@lystran/pi-serena-hooks",
   "npm:pi-powerline-footer",
   "npm:@lystran/pi-mvn-compact",
-  "npm:@lystran/pi-session-rename"
+  "npm:@lystran/pi-session-rename",
+  "npm:billion-context"
 ]` -}}
 {{- fromJson .chezmoi.stdin
   | setValueAtPath "packages" $packages
