@@ -44,6 +44,8 @@ npm install -g \
     react-dom \
     react-icons \
     sharp 
+
+npm install -g billion-context --prefix=~/.local
 '''
 
 [tools.python]
