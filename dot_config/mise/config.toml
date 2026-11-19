@@ -36,6 +36,7 @@ prettier = "latest"
 uv = "latest"
 shellcheck = "latest"
 jq = "latest"
+opencode = "latest"
 
 [tools.node]
 version = "lts"
@@ -49,7 +50,6 @@ npm install -g \
     sharp
 
 npm install -g billion-context --prefix=~/.local
-npm install -g @opencode/cli --allow-scripts=@opencode/cli
 '''
 
 [tools.python]
