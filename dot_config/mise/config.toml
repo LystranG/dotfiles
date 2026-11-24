@@ -30,7 +30,13 @@ mvnd = "1.0.5"
 "npm:markdownlint-cli" = "latest"
 "npm:ajv-cli" = "latest"
 "pipx:serena-agent" = "latest"
+
 "pipx:graphifyy" = "latest"
+"pipx:graphifyy[mcp]" = "latest"
+"pipx:graphifyy[watch]" = "latest"
+"pipx:graphifyy[sql]" = "latest"
+"pipx:graphifyy[chinese]" = "latest"
+
 "go:golang.org/x/tools/gopls" = "latest"
 antigravity-cli = "latest"
 pnpm = "latest"
